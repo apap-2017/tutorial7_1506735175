@@ -15,9 +15,7 @@ import com.example.service.StudentService;
 
 public class StudentRestController {
 
-    @Autowired
-    StudentService studentDAO;
-    
+	
 	@Autowired
 	StudentService studentService;
 	
@@ -30,7 +28,7 @@ public class StudentRestController {
 	@RequestMapping("/student/viewall")
 	public List<StudentModel> viewall () {
 		
-        List<StudentModel> students = studentDAO.selectAllStudents();
+        List<StudentModel> students = studentService.selectAllStudents();
         return students;
 	}	
 	

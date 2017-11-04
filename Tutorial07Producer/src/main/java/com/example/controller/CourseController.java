@@ -15,14 +15,6 @@ public class CourseController
     @Autowired
     CourseService courseDAO;
 
-    /*
-    @RequestMapping("/")
-    public String index ()
-    {
-        return "index";
-    }
-    */
-
     @RequestMapping("/course/view/{id}")
     public String viewCourse (Model model,
     		@PathVariable(value = "id") String idcourse) {
@@ -39,11 +31,4 @@ public class CourseController
     }
       
 }
-
-
-
-
-
-
-
 

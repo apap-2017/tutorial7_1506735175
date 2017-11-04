@@ -78,23 +78,6 @@ public class StudentController
         }
     }
 
-/*
-    @RequestMapping("/course/view/{id}")
-    public String viewCourse (Model model,
-    		@PathVariable(value = "id") String idcourse) {
-    
-    	CourseModel course = studentDAO.selectCourse (idcourse);
-        if (course != null) {
-            model.addAttribute ("course", course);
-            return "viewforcourse";
-        } else {
-            model.addAttribute ("id", idcourse);
-            return "not-found";
-        }    	
-    	
-    	
-    }
-*/
     @RequestMapping("/student/viewall")
     public String view (Model model)
     {
@@ -134,7 +117,6 @@ public class StudentController
     
     public String updateSubmit (StudentModel student)
   	 		{
-    			//StudentModel student = new StudentModel (npm, name, gpa);
     			studentDAO.updateStudent(student);
     			return "success-update";
     			

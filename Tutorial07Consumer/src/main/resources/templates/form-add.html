@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+
+	<title>Add student</title>
+	<div th:replace="fragments/fragment :: links"></div>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+	<div th:replace="fragments/fragment :: header"></div>
+
+	<h1 class="page-header">Menambah Mahasiswa</h1>
+
+	<form action="/student/add/submit" method="get">
+		<table>
+			<tr>
+				<td>NPM</td>
+				<td><input type="text" name="npm"/></td>
+			</tr>
+			<tr>
+				<td>NAME</td>
+				<td><input type="text" name="name"/></td>
+			</tr>
+			<tr>
+				<td>GPA</td>
+				<td><input type="text" name="gpa"/></td>
+			</tr>
+			<tr>
+				<td><button type="submit" name="action" value="save">Save</button></td>
+			</tr>
+		</table>
+	</form>
+   	<div th:replace="fragments/fragment :: footer"></div>
+
+</body>
+
+</html>
+
